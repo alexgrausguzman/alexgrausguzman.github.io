@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon.png">
+    
+    <title>Recetas App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/02cb52559d.js" crossorigin="anonymous"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
+
+   
+</head>
+<body>
+    <div class="preloader">
+        <h2>Recetas App</h2>
+        <img src="recipeapp.png" alt="loading">
+    </div>
+
+<header>
+    <a href="#"><h1>Recetas App</h1></a> 
+
+    <div class="header-elements">
+        <h4><a href="favoritas.html">Favoritas</a></h4>
+        <div class="buscador">
+            <input type="search" id="buscador" placeholder="Busca tu receta">
+        </div>
+    </div>
+    
+</header>
+
+
+<main>
+
+<section class="carousel-aletario">
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+           
+    </div>
+        <div class="swiper-button-next "></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+     </div>
+</section>
+
+<section class="list-food">
+ 
+
+
+</section>
+
+
+</main>
+
+ <div class="modal-info">
+
+ </div>
+
+<script src="script.js" type="module"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+
+    modificar();
+ 
+    function modificar(){
+
+        let mediaqueryList = window.matchMedia("(max-width: 750px)");
+        let valor = 3;
+        //por mejorar
+        if(mediaqueryList.matches) valor = 3;
+        
+
+        let swiper = new Swiper(".mySwiper", {
+        slidesPerView: valor,
+        spaceBetween: 1,
+        slidesPerGroup: valor,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    }
+    
+    
+  </script>
+
+ 
+</body>
+</html>
